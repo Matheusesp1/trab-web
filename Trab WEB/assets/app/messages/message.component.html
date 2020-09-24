@@ -1,0 +1,20 @@
+<article class="panel panel-default" [ngStyle] = "{backgroundColor: color, 'font-size.px': tam}"
+(mouseenter) = "color = 'green'" (mouseleave) = "color = 'lightgreen'"
+(click) = "color = 'green'" (dblclick) = "onMudaStyle()">
+    <div class="panel-body">
+        <b>{{ messageVarClasse.content }}</b>
+        <b>{{ messageVarClasseAlias.content }}</b>
+        <!--{{message.content}}-->
+    </div>
+    <footer class="panel-footer" [ngStyle] = "{backgroundColor: colorFooter}">
+        <div class="author">
+            <b>{{ messageVarClasse.username }}</b>
+            <b>{{ messageVarClasseAlias.username }}</b>
+            <!--{{message.author}}-->
+        </div>
+        <div class="config">
+            <a (click)='onEditService()'>Editar</a>
+            <a (click)='onDeleteService()'>Deletar</a>
+        </div>
+    </footer>
+</article>
